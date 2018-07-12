@@ -5,30 +5,30 @@ import CompletedTodo from './CompletedTodo';
 import {addTodo} from "../../actions/action";
 
 class Todolist extends Component {
-    constructor(props) {
-        super(props)
-        this.state = ({
-            sortTodo: [],
-            orderTodo: 'default'
-        })
-    }
-
-    handleSort = () => {
-        if (this.state.orderTodo === 'default') {
-            this.setState = ({
-                sortTodo: this.props.allTodos.sort(),
-                orderTodo: 'aTOz'
-            })
-        }
-        else if (this.state.orderTodo === 'aTOz') {
-            this.setState = ({
-                orderTodo: 'default'
-            })
-        }
-    }
+    // constructor(props) {
+    //     super(props)
+    //     this.state = ({
+    //         sortTodo: [],
+    //         orderTodo: 'default'
+    //     })
+    // }
+    //
+    // handleSort = () => {
+    //     if (this.state.orderTodo === 'default') {
+    //         this.setState = ({
+    //             sortTodo: this.props.allTodos.sort(),
+    //             orderTodo: 'aTOz'
+    //         })
+    //     }
+    //     else if (this.state.orderTodo === 'aTOz') {
+    //         this.setState = ({
+    //             orderTodo: 'default'
+    //         })
+    //     }
+    // }
 
     render() {
-        let showTodo = (this.state.orderTodo === 'default' ? this.props.allTodos : this.state.sortTodo)
+        // let showTodo = (this.state.orderTodo === 'default' ? this.props.allTodos : this.state.sortTodo)
         return (
 
             <div>
@@ -55,7 +55,7 @@ class Todolist extends Component {
                         })
                     }
                 </ul>
-                <button onChange={this.handleSort}>排序</button>
+                <button>排序</button>
             </div>
         )
     }
